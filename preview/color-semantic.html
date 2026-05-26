@@ -1,0 +1,24 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  .label { font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--clay-500); margin-bottom: 14px; }
+  table { width: 100%; border-collapse: collapse; font-family: var(--font-text); font-size: 13px; }
+  td { padding: 8px 0; border-bottom: 1px solid rgba(43,31,24,0.08); vertical-align: middle; }
+  td:first-child { width: 28px; }
+  td:nth-child(2) { font-weight: 600; color: var(--clay-700); width: 140px; }
+  td:nth-child(3) { color: var(--clay-500); }
+  td:last-child { font-family: var(--font-mono); font-size: 12px; color: var(--clay-300); text-align: right; }
+  .chip { width: 20px; height: 20px; border-radius: 4px; border: 1px solid rgba(43,31,24,0.08); display: inline-block; }
+</style></head>
+<body>
+  <div class="label">Semantic tokens</div>
+  <table>
+    <tr><td><span class="chip" style="background:#FAF5EB"></span></td><td>--bg-page</td><td>page background</td><td>cream-50</td></tr>
+    <tr><td><span class="chip" style="background:#F4ECDF"></span></td><td>--bg-surface</td><td>card / panel</td><td>cream-100</td></tr>
+    <tr><td><span class="chip" style="background:#2B1F18"></span></td><td>--fg-1</td><td>primary text</td><td>clay-800</td></tr>
+    <tr><td><span class="chip" style="background:#5B463A"></span></td><td>--fg-2</td><td>secondary text</td><td>clay-500</td></tr>
+    <tr><td><span class="chip" style="background:#B5563A"></span></td><td>--accent</td><td>brand, CTAs, links</td><td>terracotta-500</td></tr>
+    <tr><td><span class="chip" style="background:#C68B3D"></span></td><td>--highlight</td><td>dates, tag pills</td><td>ochre-400</td></tr>
+    <tr><td><span class="chip" style="background:#7A8A6D"></span></td><td>--restful</td><td>meditation surfaces</td><td>sage-500</td></tr>
+  </table>
+</body></html>

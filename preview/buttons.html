@@ -1,0 +1,28 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  .label { font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--clay-500); margin-bottom: 18px; }
+  .grid { display: grid; grid-template-columns: auto auto auto auto; gap: 14px 18px; align-items: center; }
+  .role { font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--clay-300); }
+  .btn {
+    font-family: var(--font-text); font-size: 14px; font-weight: 500;
+    padding: 11px 22px; border-radius: 8px; border: 1px solid transparent;
+    cursor: pointer; transition: all 200ms cubic-bezier(.4,0,.2,1);
+    background: none; line-height: 1; letter-spacing: 0.01em;
+  }
+  .btn.primary { background: var(--terracotta-500); color: var(--cream-50); }
+  .btn.primary:hover { background: var(--terracotta-600); }
+  .btn.secondary { background: var(--cream-100); color: var(--clay-700); border-color: rgba(43,31,24,0.14); }
+  .btn.secondary:hover { background: var(--sand-200); }
+  .btn.ghost { color: var(--terracotta-600); }
+  .btn.ghost:hover { color: var(--terracotta-700); text-decoration: underline; }
+  .btn.disabled { background: var(--terracotta-500); color: var(--cream-50); opacity: 0.4; cursor: not-allowed; }
+</style></head>
+<body>
+  <div class="label">Buttons</div>
+  <div class="grid">
+    <span class="role">Primary</span><button class="btn primary">Réserver une place</button><button class="btn primary" style="background:#9B4730">Hover</button><button class="btn disabled">Disabled</button>
+    <span class="role">Secondary</span><button class="btn secondary">En savoir plus</button><button class="btn secondary" style="background:#E8DBC3">Hover</button><span></span>
+    <span class="role">Ghost</span><button class="btn ghost">Voir tous les événements →</button><button class="btn ghost" style="color:#7E3725;text-decoration:underline">Hover</button><span></span>
+  </div>
+</body></html>

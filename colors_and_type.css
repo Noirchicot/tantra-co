@@ -1,0 +1,298 @@
+/* ============================================================
+   Tantra & Co. — Design Tokens
+   colors, typography, spacing, radii, shadows
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=Manrope:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* --------------------------------------------------------
+     COLORS — earthy warm naturals
+     terracotta · ochre · sand · clay · soft sage
+     -------------------------------------------------------- */
+
+  /* Terracotta — primary, used for headlines, CTAs, anchors */
+  --terracotta-50:  #FBEFE7;
+  --terracotta-100: #F2D6C4;
+  --terracotta-200: #E6B59A;
+  --terracotta-300: #D69372;
+  --terracotta-400: #C57353;
+  --terracotta-500: #B5563A;  /* brand primary */
+  --terracotta-600: #9B4730;
+  --terracotta-700: #7E3725;
+  --terracotta-800: #5C281A;
+  --terracotta-900: #3B1A11;
+
+  /* Ochre — secondary, used for highlights, dates, tags */
+  --ochre-50:  #FAF1DD;
+  --ochre-100: #F1DFB4;
+  --ochre-200: #E5C580;
+  --ochre-300: #D6A858;
+  --ochre-400: #C68B3D;  /* accent */
+  --ochre-500: #A87326;
+  --ochre-600: #835A1C;
+  --ochre-700: #5E4012;
+
+  /* Sand & cream — surface tints */
+  --cream-50:  #FAF5EB;  /* page background */
+  --cream-100: #F4ECDF;  /* card surface */
+  --sand-200:  #E8DBC3;  /* subtle dividers, chips */
+  --sand-300:  #D6C29F;  /* hover surface */
+  --sand-400:  #BFA374;
+
+  /* Clay — text & deep neutrals */
+  --clay-300: #877264;
+  --clay-500: #5B463A;
+  --clay-700: #3A2A22;
+  --clay-800: #2B1F18;
+  --clay-900: #1A120E;
+
+  /* Sage — restful secondary, used sparingly for meditations */
+  --sage-100: #DDE3D2;
+  --sage-300: #A8B595;
+  --sage-500: #7A8A6D;
+  --sage-700: #4E5B45;
+
+  /* Functional */
+  --success: #6D8757;
+  --warning: #C68B3D;
+  --danger:  #9B4730;
+
+  /* --------------------------------------------------------
+     SEMANTIC COLOR TOKENS
+     -------------------------------------------------------- */
+  --bg-page:        var(--cream-50);
+  --bg-surface:     var(--cream-100);
+  --bg-surface-2:   var(--sand-200);
+  --bg-inverse:     var(--clay-800);
+
+  --fg-1:           var(--clay-800);  /* primary text */
+  --fg-2:           var(--clay-500);  /* secondary text */
+  --fg-3:           var(--clay-300);  /* tertiary / meta */
+  --fg-inverse:     var(--cream-50);
+  --fg-on-primary:  var(--cream-50);
+
+  --accent:         var(--terracotta-500);
+  --accent-hover:   var(--terracotta-600);
+  --accent-pressed: var(--terracotta-700);
+  --accent-soft:    var(--terracotta-50);
+
+  --highlight:      var(--ochre-400);
+  --restful:        var(--sage-500);
+
+  --border-subtle:  rgba(43, 31, 24, 0.08);
+  --border-default: rgba(43, 31, 24, 0.14);
+  --border-strong:  rgba(43, 31, 24, 0.28);
+
+  /* --------------------------------------------------------
+     TYPOGRAPHY
+     Display: Newsreader (warm editorial serif w/ optical sizing)
+     Text:    Manrope (humanist sans)
+     -------------------------------------------------------- */
+  --font-display: 'Newsreader', 'Cormorant Garamond', Georgia, serif;
+  --font-text:    'Manrope', ui-sans-serif, system-ui, sans-serif;
+  --font-mono:    ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+
+  /* Scale (rem-relative) */
+  --fs-12: 0.75rem;
+  --fs-13: 0.8125rem;
+  --fs-14: 0.875rem;
+  --fs-15: 0.9375rem;
+  --fs-16: 1rem;
+  --fs-18: 1.125rem;
+  --fs-20: 1.25rem;
+  --fs-24: 1.5rem;
+  --fs-28: 1.75rem;
+  --fs-32: 2rem;
+  --fs-40: 2.5rem;
+  --fs-48: 3rem;
+  --fs-56: 3.5rem;
+  --fs-64: 4rem;
+  --fs-80: 5rem;
+  --fs-96: 6rem;
+
+  /* Line heights */
+  --lh-tight: 1.05;
+  --lh-snug:  1.18;
+  --lh-base:  1.55;
+  --lh-loose: 1.75;
+
+  /* Tracking */
+  --ls-tight:  -0.02em;
+  --ls-normal:  0;
+  --ls-wide:   0.04em;
+  --ls-eyebrow: 0.18em;
+
+  /* --------------------------------------------------------
+     SPACING — 4px base, but compressed for editorial density
+     -------------------------------------------------------- */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  24px;
+  --space-6:  32px;
+  --space-7:  48px;
+  --space-8:  64px;
+  --space-9:  96px;
+  --space-10: 128px;
+
+  /* --------------------------------------------------------
+     RADII — soft, never pill-y; cards lean rectangular
+     -------------------------------------------------------- */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 14px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
+
+  /* --------------------------------------------------------
+     SHADOWS — diffused, warm (no blue cast). Used sparingly.
+     -------------------------------------------------------- */
+  --shadow-1: 0 1px 2px rgba(43, 31, 24, 0.06),
+              0 1px 1px rgba(43, 31, 24, 0.04);
+  --shadow-2: 0 4px 12px rgba(43, 31, 24, 0.08),
+              0 1px 2px rgba(43, 31, 24, 0.05);
+  --shadow-3: 0 14px 32px rgba(43, 31, 24, 0.12),
+              0 2px 6px rgba(43, 31, 24, 0.06);
+  --shadow-inset: inset 0 0 0 1px var(--border-subtle);
+
+  /* --------------------------------------------------------
+     MOTION
+     -------------------------------------------------------- */
+  --ease-out:   cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-in:    cubic-bezier(0.55, 0.06, 0.68, 0.19);
+  --ease-soft:  cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast:   140ms;
+  --dur-base:   240ms;
+  --dur-slow:   480ms;
+}
+
+/* ============================================================
+   SEMANTIC TYPE STYLES
+   Use these classes (or copy declarations) rather than ad-hoc.
+   ============================================================ */
+
+html { color: var(--fg-1); background: var(--bg-page); }
+body {
+  font-family: var(--font-text);
+  font-size: var(--fs-16);
+  line-height: var(--lh-base);
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Display — Newsreader, editorial, optical sized */
+.t-display-xl,
+.t-display,
+.t-h1, .t-h2, .t-h3 {
+  font-family: var(--font-display);
+  color: var(--fg-1);
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: var(--ls-tight);
+  text-wrap: balance;
+}
+
+.t-display-xl {
+  font-size: clamp(2.75rem, 5.4vw, 5rem);  /* up to 80 */
+  line-height: var(--lh-tight);
+  font-variation-settings: "opsz" 72;
+}
+.t-display {
+  font-size: clamp(2rem, 3.8vw, 3.5rem);
+  line-height: var(--lh-snug);
+  font-variation-settings: "opsz" 60;
+}
+.t-h1 {
+  font-size: clamp(1.75rem, 2.8vw, 2.5rem);
+  line-height: 1.12;
+  font-variation-settings: "opsz" 36;
+}
+.t-h2 {
+  font-size: clamp(1.5rem, 2.2vw, 2rem);
+  line-height: 1.2;
+  font-variation-settings: "opsz" 28;
+}
+.t-h3 {
+  font-size: var(--fs-24);
+  line-height: 1.25;
+  font-variation-settings: "opsz" 22;
+}
+
+/* Editorial italic — for quotes and accents */
+.t-italic {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Body text — Manrope */
+.t-lead {
+  font-family: var(--font-text);
+  font-size: var(--fs-20);
+  line-height: 1.55;
+  color: var(--fg-2);
+  font-weight: 400;
+  text-wrap: pretty;
+}
+.t-body {
+  font-family: var(--font-text);
+  font-size: var(--fs-16);
+  line-height: var(--lh-base);
+  color: var(--fg-1);
+}
+.t-small {
+  font-family: var(--font-text);
+  font-size: var(--fs-14);
+  line-height: 1.5;
+  color: var(--fg-2);
+}
+.t-meta {
+  font-family: var(--font-text);
+  font-size: var(--fs-13);
+  line-height: 1.4;
+  color: var(--fg-3);
+}
+
+/* Eyebrow — small caps used over section headers */
+.t-eyebrow {
+  font-family: var(--font-text);
+  font-size: var(--fs-12);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-eyebrow);
+  color: var(--terracotta-600);
+  font-weight: 600;
+}
+
+/* Quote block — italic serif, terracotta accent */
+.t-quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.5rem, 2.4vw, 2.25rem);
+  line-height: 1.3;
+  color: var(--clay-700);
+  font-weight: 400;
+}
+
+/* Code */
+.t-code {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  background: var(--sand-200);
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+}
+
+/* Links inline */
+a { color: var(--accent); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: var(--accent-hover); }
+
+/* Focus ring — warm, never blue */
+:focus-visible {
+  outline: 2px solid var(--terracotta-400);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}

@@ -1,0 +1,17 @@
+/* Shared card scaffold — preview cards inherit colors_and_type tokens */
+@import url('../colors_and_type.css');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  background: var(--cream-50);
+  color: var(--clay-800);
+  font-family: var(--font-text);
+}
+body {
+  padding: 28px 32px;
+  min-height: 100%;
+}
+.row { display: flex; align-items: center; gap: 16px; }
+.col { display: flex; flex-direction: column; gap: 12px; }
+.muted { color: var(--fg-2); }
+.tiny { font-size: 11px; color: var(--fg-3); letter-spacing: 0.04em; }

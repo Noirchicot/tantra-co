@@ -1,0 +1,21 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  .label { font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--clay-500); margin-bottom: 16px; }
+  .row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+  .sw { aspect-ratio: 1 / 0.85; border-radius: 10px; padding: 12px; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid rgba(43,31,24,0.08); font-family: var(--font-text); }
+  .sw .name { font-weight: 600; font-size: 12px; color: var(--clay-700); }
+  .sw .hex { font-size: 11px; color: var(--clay-500); }
+  .note { margin-top: 12px; font-size: 12px; color: var(--fg-2); font-style: italic; }
+</style></head>
+<body>
+  <div class="label">Surfaces · cream &amp; sand</div>
+  <div class="row">
+    <div class="sw" style="background:#FAF5EB"><span class="name">cream-50</span><span class="hex">FAF5EB · page</span></div>
+    <div class="sw" style="background:#F4ECDF"><span class="name">cream-100</span><span class="hex">F4ECDF · card</span></div>
+    <div class="sw" style="background:#E8DBC3"><span class="name">sand-200</span><span class="hex">E8DBC3 · divider</span></div>
+    <div class="sw" style="background:#D6C29F"><span class="name">sand-300</span><span class="hex">D6C29F · hover</span></div>
+    <div class="sw" style="background:#BFA374"><span class="name">sand-400</span><span class="hex">BFA374</span></div>
+  </div>
+  <div class="note">Pages are never pure white.</div>
+</body></html>

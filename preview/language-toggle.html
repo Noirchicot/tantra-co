@@ -1,0 +1,33 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  .label { font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--clay-500); margin-bottom: 16px; }
+  .row { display: flex; gap: 32px; align-items: center; }
+  .toggle {
+    display: inline-flex; gap: 2px; padding: 3px; background: var(--cream-100);
+    border: 1px solid rgba(43,31,24,0.08); border-radius: 999px;
+    font-family: var(--font-text); font-size: 12px; font-weight: 600;
+    letter-spacing: 0.06em; text-transform: uppercase;
+  }
+  .toggle button {
+    border: 0; background: none; cursor: pointer; padding: 6px 14px; border-radius: 999px;
+    color: var(--clay-500); font: inherit; letter-spacing: inherit;
+  }
+  .toggle button.active { background: var(--clay-800); color: var(--cream-50); }
+  .inline { display: inline-flex; gap: 6px; font-family: var(--font-text); font-size: 13px; color: var(--clay-500); align-items: center; }
+  .inline a { text-decoration: none; color: var(--clay-500); }
+  .inline a.active { color: var(--terracotta-600); font-weight: 600; }
+  .inline span { color: var(--clay-300); }
+</style></head>
+<body>
+  <div class="label">Language toggle</div>
+  <div class="row">
+    <div class="toggle">
+      <button class="active">FR</button>
+      <button>EN</button>
+    </div>
+    <div class="inline">
+      <a href="#" class="active">Français</a><span>·</span><a href="#">English</a>
+    </div>
+  </div>
+</body></html>

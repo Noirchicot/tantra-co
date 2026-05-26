@@ -1,0 +1,32 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  .label { font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--clay-500); margin-bottom: 14px; }
+  .ac {
+    display: grid; grid-template-columns: 160px 1fr;
+    gap: 24px; max-width: 620px;
+  }
+  .img {
+    background: linear-gradient(135deg, #D6A858 0%, #B5563A 100%);
+    border-radius: 10px; aspect-ratio: 4 / 5; display: flex; align-items: flex-end; padding: 12px;
+    color: var(--cream-50); font-family: var(--font-text); font-size: 10px; opacity: 0.95;
+    letter-spacing: 0.08em; text-transform: uppercase;
+  }
+  .body { display: flex; flex-direction: column; justify-content: center; gap: 8px; }
+  .eyebrow { font-family: var(--font-text); font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--terracotta-600); }
+  .body h3 { font-family: var(--font-display); font-size: 26px; line-height: 1.2; color: var(--clay-800); text-wrap: balance; }
+  .body p { font-family: var(--font-text); font-size: 14px; line-height: 1.5; color: var(--clay-500); max-width: 380px; }
+  .meta { font-family: var(--font-text); font-size: 12px; color: var(--clay-300); }
+</style></head>
+<body>
+  <div class="label">Article card</div>
+  <div class="ac">
+    <div class="img">Photo · 4:5</div>
+    <div class="body">
+      <span class="eyebrow">Lecture · 6 min</span>
+      <h3>Sur la lenteur, et ce qu'elle rend possible</h3>
+      <p>Ce que change le fait de ralentir avant la pratique, et pourquoi cela commence dès le seuil.</p>
+      <span class="meta">Mai 2026</span>
+    </div>
+  </div>
+</body></html>
