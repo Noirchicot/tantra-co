@@ -105,7 +105,7 @@ function SeminarDetail({ lang, t, onBook, onFlyer, setView }) {
         </div>
         <div className="tc-seminar__practical-item">
           <span className="tc-eyebrow">{lang === 'fr' ? 'Date & heure' : 'Date & time'}</span>
-          <div className="tc-seminar__practical-value">{lang === 'fr' ? 'Lun. 2 juin · 19h30 → 21h30' : 'Mon 2 Jun · 19:30 → 21:30'}</div>
+          <div className="tc-seminar__practical-value">{lang === 'fr' ? 'Lun. 29 juin · 19h30 → 21h30' : 'Mon 29 Jun · 19:30 → 21:30'}</div>
         </div>
         <div className="tc-seminar__practical-item">
           <span className="tc-eyebrow">{lang === 'fr' ? 'Tarif' : 'Price'}</span>

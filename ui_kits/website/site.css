@@ -189,6 +189,35 @@ button { font: inherit; cursor: pointer; }
 .tc-event__places.few { background: var(--terracotta-100); color: var(--terracotta-700); }
 .tc-event__places.full { background: var(--clay-800); color: var(--cream-50); }
 
+/* Summer-break row */
+.tc-event--break {
+  grid-template-columns: 88px 1fr;
+  gap: 32px;
+  padding: 18px 0;
+  background: var(--cream-100);
+  border-bottom: 1px solid var(--border-subtle);
+  opacity: 0.85;
+}
+.tc-event--break:hover { background: var(--cream-100); }
+.tc-event__date--muted { padding-left: 0; }
+.tc-event__date--muted .m {
+  font-family: var(--font-text);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--clay-300);
+  margin-top: 0;
+}
+.tc-event__break-label {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 17px;
+  line-height: 1.4;
+  color: var(--clay-500);
+  font-variation-settings: 'opsz' 22;
+}
+
 /* ---------- Articles ---------- */
 .tc-articles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 48px; }
 .tc-article { display: flex; flex-direction: column; gap: 14px; cursor: pointer; }

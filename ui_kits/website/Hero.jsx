@@ -11,8 +11,8 @@ function Hero({ t, lang, onBook, setView, onFlyer }) {
         </div>
         <p className="tc-hero__subtitle">
           {lang === 'fr'
-            ? <span>Une soirée mensuelle pour ralentir, ressentir et se reconnecter.<br/>Le premier lundi du mois — ouvert à toutes et tous, aucune expérience requise.</span>
-            : <span>A monthly evening to slow down, feel, and reconnect.<br/>The first Monday of the month — open to anyone, no experience required.</span>}
+            ? <span>Une soirée mensuelle pour ralentir, ressentir et se reconnecter.<br/>Ouvert à toutes et tous — aucune expérience requise.</span>
+            : <span>A monthly evening to slow down, feel, and reconnect.<br/>Open to anyone — no experience required.</span>}
         </p>
         <div className="tc-hero__cta">
           <button className="tc-btn tc-btn--primary" onClick={onBook}>{t('hero_cta')}</button>
@@ -34,7 +34,7 @@ function NextCallout({ t, onBook }) {
     <div className="tc-callout">
       <div className="tc-callout__inner">
         <div className="tc-callout__date">
-          <span className="d">02</span>
+          <span className="d">29</span>
           <span className="m">Juin</span>
         </div>
         <div className="tc-callout__body">

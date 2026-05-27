@@ -1,20 +1,29 @@
 // Events list + event row
 const SEMINARS = [
-  { id: 1, d: '02', m: { fr: 'Juin', en: 'Jun' }, title: { fr: 'Séminaire de découverte — juin', en: 'Discovery seminar — June' },
-    meta: { fr: 'Lun. · 19h30 → 21h30 · Lausanne', en: 'Mon · 19:30 → 21:30 · Lausanne' }, places: 'few', placesLabel: { fr: '3 places', en: '3 seats' } },
-  { id: 2, d: '07', m: { fr: 'Juil.', en: 'Jul' }, title: { fr: 'Séminaire de découverte — juillet', en: 'Discovery seminar — July' },
-    meta: { fr: 'Lun. · 19h30 → 21h30 · Lausanne', en: 'Mon · 19:30 → 21:30 · Lausanne' }, places: 'open', placesLabel: { fr: '12 places', en: '12 seats' } },
-  { id: 3, d: '04', m: { fr: 'Août', en: 'Aug' }, title: { fr: 'Séminaire de découverte — août', en: 'Discovery seminar — August' },
-    meta: { fr: 'Lun. · 19h30 → 21h30 · Lausanne', en: 'Mon · 19:30 → 21:30 · Lausanne' }, places: 'open', placesLabel: { fr: '12 places', en: '12 seats' } },
-  { id: 4, d: '01', m: { fr: 'Sept.', en: 'Sep' }, title: { fr: 'Séminaire de découverte — septembre', en: 'Discovery seminar — September' },
-    meta: { fr: 'Lun. · 19h30 → 21h30 · Lausanne', en: 'Mon · 19:30 → 21:30 · Lausanne' }, places: 'full', placesLabel: { fr: 'Complet', en: 'Full' } },
+  { id: 1, d: '29', m: { fr: 'Juin', en: 'Jun' },
+    title: { fr: 'Séminaire de découverte — juin', en: 'Discovery seminar — June' },
+    meta: { fr: 'Lun. · 19h30 → 21h30 · Paris', en: 'Mon · 19:30 → 21:30 · Paris' },
+    places: 'open', placesLabel: { fr: '12 places', en: '12 seats' } },
+  { id: 2, d: '28', m: { fr: 'Sept.', en: 'Sep' },
+    title: { fr: 'Séminaire de découverte — septembre', en: 'Discovery seminar — September' },
+    meta: { fr: 'Lun. · 19h30 → 21h30 · Paris', en: 'Mon · 19:30 → 21:30 · Paris' },
+    places: 'open', placesLabel: { fr: '12 places', en: '12 seats' } },
+  { id: 3, d: '26', m: { fr: 'Oct.', en: 'Oct' },
+    title: { fr: 'Séminaire de découverte — octobre', en: 'Discovery seminar — October' },
+    meta: { fr: 'Lun. · 19h30 → 21h30 · Paris', en: 'Mon · 19:30 → 21:30 · Paris' },
+    places: 'open', placesLabel: { fr: '12 places', en: '12 seats' } },
 ];
 
+const SUMMER_BREAK = {
+  fr: { eyebrow: 'Juillet · Août', label: 'Pause estivale — pas de séminaires pendant l\u2019été.' },
+  en: { eyebrow: 'July · August', label: 'Summer break — no seminars during the summer.' },
+};
+
 const PARTNER_EVENTS = [
-  { id: 'p1', d: '15', m: { fr: 'Juin', en: 'Jun' }, title: { fr: 'Cercle d\u2019écoute · Vevey', en: 'Listening circle · Vevey' },
+  { id: 'p1', d: '15', m: { fr: 'Juin', en: 'Jun' }, title: { fr: 'Cercle d\u2019écoute · Paris', en: 'Listening circle · Paris' },
     meta: { fr: 'Sam. · 14h → 17h · partenaire : Maison du calme', en: 'Sat · 14:00 → 17:00 · partner: Maison du calme' } },
-  { id: 'p2', d: '22', m: { fr: 'Juin', en: 'Jun' }, title: { fr: 'Atelier respiration · Genève', en: 'Breath workshop · Geneva' },
-    meta: { fr: 'Sam. · 10h → 13h · partenaire : Souffle GE', en: 'Sat · 10:00 → 13:00 · partner: Souffle GE' } },
+  { id: 'p2', d: '22', m: { fr: 'Juin', en: 'Jun' }, title: { fr: 'Atelier respiration · Paris', en: 'Breath workshop · Paris' },
+    meta: { fr: 'Sam. · 10h → 13h · partenaire : Souffle PA', en: 'Sat · 10:00 → 13:00 · partner: Souffle PA' } },
 ];
 
 function EventRow({ e, lang, onBook, isPartner }) {
@@ -42,6 +51,20 @@ function EventRow({ e, lang, onBook, isPartner }) {
   );
 }
 
+function SummerBreakRow({ lang }) {
+  const s = SUMMER_BREAK[lang];
+  return (
+    <div className="tc-event tc-event--break">
+      <div className="tc-event__date tc-event__date--muted">
+        <span className="m">{s.eyebrow}</span>
+      </div>
+      <div className="tc-event__body">
+        <div className="tc-event__break-label">{s.label}</div>
+      </div>
+    </div>
+  );
+}
+
 function EventsList({ t, lang, onBook, compact }) {
   const events = compact ? SEMINARS.slice(0, 3) : SEMINARS;
   return (
@@ -55,7 +78,12 @@ function EventsList({ t, lang, onBook, compact }) {
         {compact && <a className="tc-btn tc-btn--ghost" href="#">{lang === 'fr' ? 'Voir tout →' : 'See all →'}</a>}
       </div>
       <div className="tc-events">
-        {events.map(e => <EventRow key={e.id} e={e} lang={lang} onBook={onBook} />)}
+        {events.map((e, i) => (
+          <React.Fragment key={e.id}>
+            <EventRow e={e} lang={lang} onBook={onBook} />
+            {i === 0 && <SummerBreakRow lang={lang} />}
+          </React.Fragment>
+        ))}
       </div>
 
       {!compact && (

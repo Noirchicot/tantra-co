@@ -15,8 +15,8 @@ window.STRINGS = {
   hero_cta2:       { fr: 'En savoir plus',     en: 'Learn more' },
 
   next_eyebrow:    { fr: 'Prochain séminaire', en: 'Next seminar' },
-  next_meta:       { fr: 'Lun. 2 juin · 19h30 → 21h30 · Lausanne · 12 places',
-                     en: 'Mon 2 Jun · 19:30 → 21:30 · Lausanne · 12 places' },
+  next_meta:       { fr: 'Lun. 29 juin · 19h30 → 21h30 · Paris · 12 places',
+                     en: 'Mon 29 Jun · 19:30 → 21:30 · Paris · 12 places' },
 
   events_title:    { fr: 'Séminaires à venir', en: 'Upcoming seminars' },
   events_lead:     { fr: 'Une soirée par mois, en français, dans un lieu calme. Les places sont limitées à douze afin de garder une qualité d\u2019écoute.',
@@ -34,8 +34,8 @@ window.STRINGS = {
                      en: 'Short practices to take away, recorded in French.' },
 
   book_title:      { fr: 'Réserver une place', en: 'Reserve a seat' },
-  book_sub:        { fr: 'Séminaire de découverte · lun. 2 juin · 19h30 · Lausanne',
-                     en: 'Discovery seminar · Mon 2 Jun · 19:30 · Lausanne' },
+  book_sub:        { fr: 'Séminaire de découverte · lun. 29 juin · 19h30 · Paris',
+                     en: 'Discovery seminar · Mon 29 Jun · 19:30 · Paris' },
   book_first:      { fr: 'Prénom',          en: 'First name' },
   book_last:       { fr: 'Nom',             en: 'Last name' },
   book_email:      { fr: 'Adresse e-mail',  en: 'Email address' },
