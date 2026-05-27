@@ -4,7 +4,7 @@ window.STRINGS = {
   nav_seminars:    { fr: 'Séminaires',    en: 'Seminars' },
   nav_articles:    { fr: 'Articles',      en: 'Articles' },
   nav_meditations: { fr: 'Méditations',   en: 'Meditations' },
-  nav_about:       { fr: 'À propos',      en: 'About' },
+  nav_about:       { fr: 'Qui sommes-nous ?', en: 'Who are we?' },
 
   hero_eyebrow:    { fr: 'Le premier lundi du mois', en: 'The first Monday of each month' },
   hero_title:      { fr: 'Une soirée pour découvrir le Tantra.',
