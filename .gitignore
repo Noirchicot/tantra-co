@@ -3,3 +3,6 @@
 .LSOverride
 ._*
 Thumbs.db
+
+# Source photos — already optimized copies live in assets/
+uploads/
